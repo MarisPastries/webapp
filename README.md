@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mari's Pastries - Tienda en Línea
 
-## Getting Started
+![Mari's Pastries Logo](https://res.cloudinary.com/dchchsyil/image/upload/v1698087997/marispastries/gugpjz48gq29kwjt7kaw.jpg)
 
-First, run the development server:
+Bienvenido a Mari's Pastries, tu tienda en línea de dulces y repostería de calidad. Aquí encontrarás una amplia variedad de deliciosos productos, desde tortas y marquesas hasta galletas y mesas dulces para eventos especiales.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Frontend: Next.js 13, TypeScript, Tailwind CSS
+- Backend: Next.js 13 API Routes
+- Base de Datos: MongoDB con Prisma
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Explora nuestro delicioso catálogo de productos.
+- Encuentra información detallada sobre cada producto, incluyendo descripciones y precios.
+- Agrega productos a tu carrito de compras y gestiona las cantidades.
+<!-- - Realiza fácilmente el proceso de pago y compra tus dulces favoritos.
+- Administra tu cuenta y realiza un seguimiento de tus pedidos. -->
+- Mantente actualizado con las últimas novedades y ofertas especiales.
 
-## Learn More
+## Configuración del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+1. Clona este repositorio:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```shell
+   git clone https://github.com/tu-usuario/maris-pastries.git
+   cd maris-pastries
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Instala las dependencias:
 
-## Deploy on Vercel
+   ```shell
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Configura las variables de entorno:
+Crea un archivo .env en la raíz del proyecto y configura tus variables de entorno. Las variables de entorno necesarias se encuentran en el archivo .env.example.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Inicia la aplicación:
+   ```shell
+   npm run dev
+   ```
+
+La aplicación estará disponible en `http://localhost:3000`.
+
+## Contribuciones
+¡Apreciamos tu interés en contribuir a Mari's Pastries! Si deseas colaborar en el desarrollo de la tienda en línea, no dudes en abrir un problema o enviar una solicitud de extracción.
+
+## Licencia
+
+Esta aplicación está bajo la licencia MIT.
+
+## Contacto
+
+Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos:
+
+- Correo Electrónico: maris.pastry20@gmail.com
+- Sitio Web: https://www.marispastries.com
+
+
+
+¡Gracias por elegir Mari's Pastries para satisfacer tus antojos de dulces y repostería! Disfruta de tus compras en línea y de nuestros productos de alta calidad.
