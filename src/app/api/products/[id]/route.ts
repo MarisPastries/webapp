@@ -73,6 +73,9 @@ export async function PATCH(request: Request, { params }: Params) {
       weights,
       portions,
       prices,
+      trending,
+      featured,
+      holiday,
     } = body;
 
     const productUpdated = await prisma.product.update({
@@ -86,6 +89,10 @@ export async function PATCH(request: Request, { params }: Params) {
         weights,
         portions,
         prices,
+        trending,
+
+        featured,
+        holiday,
       },
     });
 
