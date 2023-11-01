@@ -1,22 +1,26 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Navbar } from '@/components';
+import './globals.css';
+import type { Metadata } from 'next';
+import { Lato } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const lato = Lato({ weight: ['100', '300', '400', '700', '900'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Mari's Pastries",
   description: "Mari's Pastries Tienda Online",
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={inter.className}>{children}</body>
+    <html lang='es'>
+      <body className={`${lato.className} bg-light text-dark`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
-  )
+  );
 }
