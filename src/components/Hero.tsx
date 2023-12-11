@@ -15,11 +15,11 @@ import { heroImages } from '@/constants';
 const Hero = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  useEffect(() => {
-    setInterval(() => {
-      selectNewIndex(true);
-    }, 5000);
-  }, [selectedIndex]);
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     selectNewIndex(true);
+  //   }, 5000);
+  // }, [selectedIndex]);
 
   const selectNewIndex = (next: boolean) => {
     if (next) {
