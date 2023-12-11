@@ -41,7 +41,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <nav className='sm:hidden flex flex-col w-full h-full items-center justify-center gap-16 text-2xl absolute top-0 left-0 bg-pink-light bg-opacity-50 backdrop-blur-md'>
+        <nav className='sm:hidden flex flex-col w-full h-full items-center justify-center gap-16 text-2xl absolute top-0 left-0 bg-pink-light bg-opacity-50 backdrop-blur-md z-20'>
           <BsX
             className='text-[32px] absolute top-6 right-6'
             onClick={handleClick}
