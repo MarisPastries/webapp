@@ -16,6 +16,9 @@ const config: Config = {
         light: '#FFF4FC',
         dark: '#2D2D2D',
       },
+      backgroundImage: {
+        tarjetaRelleno: "url(/logo.jpg)"
+      }
     },
   },
   plugins: [],
