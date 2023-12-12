@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface ProductCardProps {
@@ -22,7 +23,12 @@ const ProductCard = ({ title, price, image, buttonText }: ProductCardProps) => {
       <div className='flex justify-between'>
         <p className='text-lg'>${price}</p>
 
-        <button className='bg-secondary text-light px-6 py-2 rounded-full'>{buttonText}</button>
+        <Link
+          href='/'
+          className='bg-secondary text-light px-6 py-2 rounded-full'
+        >
+          {buttonText}
+        </Link>
       </div>
     </div>
   );
