@@ -13,27 +13,29 @@ const Navbar = () => {
   };
 
   return (
-    <div className='bg-pink min-h-[80px] px-8 md:px-12 lg:px-24 flex justify-between items-center'>
-      <Link href='/'>
-        <Image
-          src='/logo.png'
-          alt='logo'
-          width={60}
-          height={60}
-          className='object-contain'
-        />
-      </Link>
-      <nav className='hidden sm:flex gap-12'>
-        <Link href='/' className='hover:text-red-800'>
-          Inicio
+    <div className='bg-pink min-h-[80px] w-screen px-8 md:px-12 lg:px-24 flex justify-center items-center'>
+      <div className='min-h-[80px] w-full max-w-[1280px] flex justify-between items-center'>
+        <Link href='/'>
+          <Image
+            src='/logo.png'
+            alt='logo'
+            width={60}
+            height={60}
+            className='object-contain'
+          />
         </Link>
-        <Link href='/menu' className='hover:text-red-800'>
-          Menú
-        </Link>
-        <Link href='/acerca' className='hover:text-red-800'>
-          Acerca de
-        </Link>
-      </nav>
+        <nav className='hidden sm:flex gap-12'>
+          <Link href='/' className='hover:text-red-800'>
+            Inicio
+          </Link>
+          <Link href='/menu' className='hover:text-red-800'>
+            Menú
+          </Link>
+          <Link href='/acerca' className='hover:text-red-800'>
+            Acerca de
+          </Link>
+        </nav>
+      </div>
 
       <div className='flex sm:hidden'>
         {!isOpen && <BsList className='text-[24px]' onClick={handleClick} />}
