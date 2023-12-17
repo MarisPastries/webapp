@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ title, price, image, buttonText }: ProductCardProps) => {
   return (
-    <div className='mx-auto bg-pink-light w-[300px] h-[440px] rounded-xl px-5 py-5 flex flex-col justify-between shadow-lg mb-8'>
+    <div className='mx-auto bg-pink-light w-[300px] h-[440px] rounded-xl px-5 py-5 flex flex-col justify-between shadow-lg mb-8 flex-grow-0 flex-shrink-0'>
       <Image
         src={image}
         alt={title}

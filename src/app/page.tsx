@@ -7,26 +7,31 @@ import getData from '@/utils/getProducts';
 export default async function Home() {
   const products: Product[] = await getData();
 
+  const featuredProducts = products.filter(
+    (product) => product.featured === true,
+  );
+
   return (
     <main>
       <Hero />
-      <div className='px-6 max-w-[1540px] mx-auto'>
+      <div className='px-6 max-w-[1540px] mx-auto overflow-x-hidden'>
         {/* Productos Destacados */}
-        <section className='py-10 h-auto w-full flex flex-col flex-wrap gap-4'>
-          <h3 className='text-xl font-bold mb-4 md:text-2xl'>
+        <section className='py-10 h-auto w-full flex flex-col'>
+          <h3 className='text-xl font-bold mb-8 md:text-2xl'>
             Productos Destacados
           </h3>
 
-          {products
-            .filter((product) => product.featured === true)
-            .map((product) => (
+          <div className='flex flex-wrap justify-center gap-4'>
+            {featuredProducts.map((product) => (
               <ProductCard
                 title={product.title}
                 price={product.prices[0]}
                 image={product.imageUrl[0]}
+                key={product.imageUrl[0]}
                 buttonText='Saber más...'
               />
             ))}
+          </div>
         </section>
         {/* Tarjeta de Relleno - Mobile */}
         <div className='max-w-[500px] min-w-[300px] h-[440px] rounded-xl mx-auto relative bg-tarjetaRelleno bg-cover bg-center md:hidden'>
@@ -81,19 +86,21 @@ export default async function Home() {
           />
         </div>
         {/* Más Vendidos */}
-        <section className='py-10 h-auto w-full flex flex-col flex-wrap gap-4'>
-          <h3 className='text-xl font-bold mb-4 md:text-2xl'>Más Vendidos</h3>
-
-          {products
-            .filter((product) => product.trending === true)
-            .map((product) => (
-              <ProductCard
-                title={product.title}
-                price={product.prices[0]}
-                image={product.imageUrl[0]}
-                buttonText='Saber más...'
-              />
-            ))}
+        <section className='relative py-10 h-auto w-full flex flex-col flex-wrap'>
+          <h3 className='text-xl font-bold mb-8 md:text-2xl'>Más Vendidos</h3>
+          <div className='overflow-x-auto w-screen max-w-[1540px] mx-auto flex gap-8 pr-12'>
+            {products
+              .filter((product) => product.trending === true)
+              .map((product) => (
+                <ProductCard
+                  title={product.title}
+                  price={product.prices[0]}
+                  image={product.imageUrl[0]}
+                  key={product.imageUrl[0]}
+                  buttonText='Saber más...'
+                />
+              ))}
+          </div>
         </section>
       </div>
     </main>
