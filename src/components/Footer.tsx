@@ -63,7 +63,7 @@ const Footer = () => {
             <span>
               <BsEnvelope />
             </span>
-            nomeacuerdo@gmail.com
+            maris.pastry20@gmail.com
           </p>
           <p className='flex gap-2 items-center'>
             <span>
