@@ -28,16 +28,25 @@ const Footer = () => {
             />
           </Link>
           <div className='flex text-primary text-2xl gap-10'>
-            <Link href='https://www.facebook.com/marispastriess'>
+            <Link
+              target='_blank'
+              href='https://www.facebook.com/marispastriess'
+            >
               <BsFacebook />
             </Link>
-            <Link href='https://www.instagram.com/marispastries_/'>
+            <Link
+              target='_blank'
+              href='https://www.instagram.com/marispastries_/'
+            >
               <BsInstagram />
             </Link>
-            <Link href='https://www.tiktok.com/@marispastries_'>
+            <Link target='_blank' href='https://www.tiktok.com/@marispastries_'>
               <BsTiktok />
             </Link>
-            <Link href='https://api.whatsapp.com/send?phone=584249605447'>
+            <Link
+              target='_blank'
+              href='https://api.whatsapp.com/send?phone=584249605447'
+            >
               <BsWhatsapp />
             </Link>
           </div>
