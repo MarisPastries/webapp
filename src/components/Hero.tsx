@@ -58,13 +58,13 @@ const Hero = () => {
         className='hidden w-screen h-[600px] object-cover md:flex 2xl:h-[800px]'
       />
       <BsChevronLeft
-        className='text-[40px] rounded-full py-2 bg-secondary bg-opacity-50 text-light absolute z-10 top-[250px] left-[16px]'
+        className='text-[40px] rounded-full py-2 bg-secondary bg-opacity-50 text-light absolute z-10 top-[250px] left-[16px] 2xl:top-[360px]'
         onClick={prevImage}
       >
         {'<'}
       </BsChevronLeft>
       <BsChevronRight
-        className='text-[40px] rounded-full py-2 bg-secondary bg-opacity-50 text-light absolute z-10 top-[250px] right-[16px]'
+        className='text-[40px] rounded-full py-2 bg-secondary bg-opacity-50 text-light absolute z-10 top-[250px] right-[16px] 2xl:top-[360px]'
         onClick={nextImage}
       >
         {'>'}
