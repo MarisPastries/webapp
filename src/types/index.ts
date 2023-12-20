@@ -14,10 +14,12 @@ export interface Product {
   holiday: boolean;
   createdAt: Date;
   updatedAt: Date;
-  category: {
-    id: string;
-    name: string;
-    createdAt: Date;
-    updatedAt: Date;
-  };
+  category: Category;
+}
+
+export interface Category {
+  id: string;
+  name: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
