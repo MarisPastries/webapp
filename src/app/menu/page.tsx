@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
-import { Product } from '@/types';
+import { Product, Category } from '@/types';
 
-import getData from '@/utils/getProducts';
-import { ProductCard } from '@/components';
+import { getProducts, getCategories } from '@/utils/getData';
+import { Menu } from '@/components';
 
-export default async function Menu() {
-  const products: Product[] = await getData();
+export default async function MenuPage() {
+  const products: Product[] = await getProducts();
+  const categories: Category[] = await getCategories();
 
   return (
     <main>
@@ -20,17 +21,7 @@ export default async function Menu() {
           </Link>
           <h2 className='text-2xl font-bold'>Menú</h2>
         </div>
-        <div className='flex flex-wrap'>
-          {products.map((product) => (
-            <ProductCard
-              title={product.title}
-              price={product.prices[0]}
-              image={product.imageUrl[0]}
-              key={product.imageUrl[0]}
-              buttonText='Saber más...'
-            />
-          ))}
-        </div>
+        <Menu products={products} categories={categories} />
       </section>
     </main>
   );
