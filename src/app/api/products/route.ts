@@ -54,6 +54,9 @@ export async function POST(request: Request) {
       weights,
       portions,
       prices,
+      featured,
+      trending,
+      holiday,
     } = body;
 
     // Crear producto en DB
@@ -68,6 +71,9 @@ export async function POST(request: Request) {
         weights: weights || [],
         portions: portions || [],
         prices,
+        featured: featured || false,
+        trending: trending || false,
+        holiday: holiday || false,
       },
     });
 
