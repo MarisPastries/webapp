@@ -25,9 +25,9 @@ model Product {
   portions    Float[]
   prices      Float[]
 
-  trending Boolean @default(false)
-  featured Boolean @default(false)
-  holiday  Boolean @default(false)
+  trending Boolean
+  featured Boolean
+  holiday  Boolean
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
