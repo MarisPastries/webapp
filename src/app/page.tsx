@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Hero, ProductCard } from '@/components';
 import { Product } from '@/types';
-import getData from '@/utils/getProducts';
+import { getProducts } from '@/utils/getData';
 
 export default async function Home() {
-  const products: Product[] = await getData();
+  const products: Product[] = await getProducts();
 
   const featuredProducts = products.filter(
     (product) => product.featured === true,
@@ -49,7 +49,7 @@ export default async function Home() {
               </p>
             </div>
             <Link
-              href='/'
+              href='/menu'
               className='bg-secondary text-light px-6 py-2 rounded-full self-end'
             >
               Conocer el Menú
@@ -71,7 +71,7 @@ export default async function Home() {
             </p>
 
             <Link
-              href='/'
+              href='/menu'
               className='bg-secondary text-light w-fit px-6 py-2 rounded-full'
             >
               Conocer el Menú
